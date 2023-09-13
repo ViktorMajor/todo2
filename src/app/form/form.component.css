@@ -1,0 +1,115 @@
+.add-topic {
+  position: absolute;;
+  z-index: 99;
+  width: auto;
+  top: 10px;
+  right: 10px;
+}
+
+p, h2 {
+  font-size: 20px;
+  margin: 5px;
+  color: white;
+}
+.title {
+  display: flex;
+  flex-direction: row;
+}
+.project-name {
+  font-size: x-large;
+  margin: 0 10px;
+  font-weight: 700;
+}
+
+#window {
+  background-color: #fff;
+  width: 75vw;
+  margin: 0 auto;
+  padding: 10px;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.project-button-container {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+
+/* Projekt gomb stílusa */
+.project-button {
+  background-color: #28a745;
+  color: #fff;
+  padding: 5px 10px;
+  margin: 0 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.project-button:hover {
+  background-color: #1e7e34;
+}
+
+/* Beviteli mező stílusa */
+.topicName-input {
+  width: 100%;
+  padding: 10px;
+  margin: 0px 0 5px 0;
+}
+
+/* Feladatok konténereinek stílusa */
+.tasks-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* Feladat oszlopok stílusa */
+.task-column {
+  width: 100%;
+
+  margin: 0 5px;
+}
+
+/* Szövegmező stílusa */
+textarea {
+  width: 95%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+}
+
+/* Színválasztó gombok konténerének stílusa */
+.button-container {
+  margin: 5px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+.color {
+  width: 70px;
+  height: 36px;
+  border: none;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.blue {
+  background-color: #7c7cc5;
+}
+.yellow {
+  background-color: darkgoldenrod;
+}
+.green {
+  background-color: darkolivegreen;
+}
+.pink {
+  background-color: brown;
+}
+.grey {
+  background-color: gray;
+}
+.origin {
+  background-color: #333;
+}
+
+

@@ -1,0 +1,39 @@
+<div>
+  
+  <button class="add-topic add" (click)="window()">Create a new Topic</button>
+  <div *ngIf="isOpen" id="window" [style.background-color]="backgroundColor">
+    <div class="title">
+      <h2>The project of your choice: </h2>
+      <p class="project-name">{{currentProject}}</p>
+    </div>
+    <div class="project-button-container">
+      <button class="project-button" *ngFor="let project of dataService.projects" (click)="setSelectedProject(project.name)">
+        {{ project.name }}
+      </button>
+    </div>
+    
+    <p>Topic name:</p>
+    <input class="topicName-input" type="text" placeholder="Topic name" #topicNameInput>
+    <div class="tasks-container">
+      <div *ngFor="let item of taskAmount; let i = index" class="task-column">
+        
+        <textarea placeholder="+ task" #taskInput></textarea>
+      </div>
+    </div>
+    
+
+    <button (click)="newTask()" class="add">Create a new task</button>
+
+    <div class="button-container">
+      <button class="blue color" (click)="setBackgroundColor('#7c7cc5')"></button>
+      <button class="green color" (click)="setBackgroundColor('darkolivegreen')"></button>
+      <button class="yellow color" (click)="setBackgroundColor('darkgoldenrod')"></button>
+      <button class="pink color" (click)="setBackgroundColor('brown')"></button>
+      <button class="grey color" (click)="setBackgroundColor('gray')"></button>
+      <button class="origin color" (click)="setBackgroundColor('#333')"></button>
+    </div>
+    <button class="add" (click)="addTopic(topicNameInput.value)">Add</button>
+  </div>
+</div>
+
+

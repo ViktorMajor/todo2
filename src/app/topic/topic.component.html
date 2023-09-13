@@ -1,0 +1,57 @@
+
+<h2 class="selectedProject">{{ selectedProject }}</h2>
+<div class="topic-container">
+  <div class="topic" *ngFor="let item of selectedProjectData" [style.background-color]="item.topicBackgroundColor">   
+     <div class="component-1">
+      <button class="plus-button" (click)="plusInput(item)">        
+        <img class="icon" src="assets/images/plus.png" alt="plus" />
+      </button>
+      <button class="delete-topic-btn" (click)="deleteTopic(item)">        
+        <img class="icon" src="assets/images/remove.png" alt="remove" />
+      </button>
+     
+    </div>
+    <h3>{{ item.name }}</h3>
+    <div *ngIf="topicInputValues[item.name]" class="new-task-container">
+      <div class="input-wrapper">
+        <input type="text" [(ngModel)]="newTaskInput" placeholder="New Task" />
+        <button class="new-task-btn" (click)="addNewTask(item)">
+          <img class="icon" src="assets/images/addtask.png" alt="addtask" />
+        </button>
+      </div>
+    </div>
+    
+    <div *ngIf="item.tasks && item.tasks.length > 0">
+      <p><strong>Tasks:</strong></p>
+      <ul>
+        <li *ngFor="let task of item.tasks let i = index">
+          <p class="task-p">{{ task }}</p>
+          <div class="btn-container">
+            <button class="done-btn" (click)="doneTask(item, i)">
+              <img class="icon" src="assets/images/check.png" alt="check" />
+            </button>
+            <button class="del-btn" (click)="deleteTask(item, i)">
+              <img class="icon" src="assets/images/delete.png" alt="delete" />
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div *ngIf="item.doneTasks && item.doneTasks.length > 0">
+      <p><strong>Done Tasks:</strong></p>
+      <ul>
+        <li *ngFor="let doneTask of item.doneTasks; let i = index">
+          <p class="task-p">{{ doneTask }}</p>
+          <div class="btn-container">
+            <button class="done-btn" (click)="undoTask(item, i)">
+              <img class="icon" src="assets/images/undo.png" alt="undo" />
+            </button>
+            <button class="del-btn" (click)="deleteDoneTask(item, i)">
+              <img class="icon" src="assets/images/delete.png" alt="delete" />
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+.navbar-container {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  width: 25vw;
+  top: 63px;
+  height: 100vh;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+
+
+.addProjectOpen {
+  display: none;
+  margin-top: 20px;
+}
+
+
+
+.add {
+  background-color: #28a745;
+}
+
+.add:hover {
+  background-color: #1e7e34;
+}

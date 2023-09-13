@@ -1,0 +1,13 @@
+h1 {
+  background-color: #272525;
+  margin: 0;
+  width: 100vw;
+  padding: 10px;
+  color: ghostwhite;
+  letter-spacing: 5px;
+  font-size: x-large;
+}
+.app-component {
+  display: flex;
+  flex-direction: row;
+}
